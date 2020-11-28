@@ -1,6 +1,6 @@
 package parameter.validator;
 
-public class MaxLengthValidator implements ParameterValidator{
+public class MaxLengthValidator implements ParameterValidator {
     private final int maxLength;
 
     public MaxLengthValidator(final int maxLength) {
@@ -9,6 +9,6 @@ public class MaxLengthValidator implements ParameterValidator{
 
     @Override
     public boolean validate(String parameterValue) {
-        return maxLength < parameterValue.length();
+        return maxLength > parameterValue.length();
     }
 }
